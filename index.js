@@ -47,7 +47,7 @@ restService.post("/test", function(req, res) {
         // Res["source"] = "webhook-echo-sample";
         
         Res["payload"] = payload;
-        Res["fulfillmentText"]= mfr_name;
+        Res["fulfillmentText"]= mfr_name.toString();
         res.json(Res);
     });
   return a;
