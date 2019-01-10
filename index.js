@@ -35,7 +35,9 @@ restService.post("/test", function(req, res) {
             mfr_name.push(mfr.Mfr_Name);
         });
 
-        res.json(mfr_name);
+        var Res = {};
+        Res['list'] = mfr_name;
+        res.json(Res);
     });
   return a;
 });
