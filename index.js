@@ -2,6 +2,8 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
+var Request = require("request");
+var http = require('http');
 
 const restService = express();
 
@@ -13,10 +15,23 @@ restService.use(
 
 restService.use(bodyParser.json());
 
+
+
+Request.get("https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/5UXWX7C5*BA?format=json&modelyear=2011", (error, response, body) => {
+    if(error) {
+       return console.dir(error);
+    }
+    console.dir(JSON.parse(body));
+});
+
 restService.get("/", function(req, res) {
   return res.json({
     source: "Hello Word"
   });
+});
+
+restService.get("/test", function(req, res) {
+  return res.json(JSON.parse(body));
 });
 
 restService.post("/echo", function(req, res) {
