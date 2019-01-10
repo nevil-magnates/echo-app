@@ -13,6 +13,12 @@ restService.use(
 
 restService.use(bodyParser.json());
 
+restService.post("/", function(req, res) {
+  return res.json({
+    source: "Hello Word"
+  });
+});
+
 restService.post("/echo", function(req, res) {
   var speech =
     req.body.result &&
