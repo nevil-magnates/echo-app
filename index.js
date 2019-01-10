@@ -39,7 +39,7 @@ restService.post("/test", function(req, res) {
         var slack = {};
         var payload = {};
         var text = "Slack Test";
-        slack['text'] = text;
+        slack['text'] = mfr_name;
         payload['slack'] = slack;
         // Res["fulfillmentText"] = "Test Case";
         // Res["payload"] = "Test Case";
