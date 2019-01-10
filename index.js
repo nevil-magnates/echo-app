@@ -39,7 +39,7 @@ restService.post("/test", function(req, res) {
         var slack = {};
         var payload = {};
         var text = "Slack Test";
-        slack['text'] = mfr_name;
+        slack['text'] = text;
         payload['slack'] = slack;
         // Res["fulfillmentText"] = "Test Case";
         // Res["payload"] = "Test Case";
@@ -47,7 +47,7 @@ restService.post("/test", function(req, res) {
         // Res["source"] = "webhook-echo-sample";
         
         Res["payload"] = payload;
-        Res["fulfillmentText"]="Test";
+        Res["fulfillmentText"]= mfr_name;
         res.json(Res);
     });
   return a;
