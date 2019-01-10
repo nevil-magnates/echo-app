@@ -36,10 +36,9 @@ restService.post("/test", function(req, res) {
         });
 
         var Res = {};
-        Res["speech"] = "speech";
-        Res["displayText"] = "speech";
+        Res["fulfillmentText"] = "Test Case";
+        Res["fulfillmentMessages"] = mfr_name;
         Res["source"] = "webhook-echo-sample";
-        Res['data'] = mfr_name;
         res.json(Res);
     });
   return a;
