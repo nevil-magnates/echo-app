@@ -36,9 +36,18 @@ restService.post("/test", function(req, res) {
         });
 
         var Res = {};
-        Res["fulfillmentText"] = "Test Case";
-        Res["fulfillmentMessages"] = mfr_name;
-        Res["source"] = "webhook-echo-sample";
+        var slack = {};
+        var payload = {};
+        var text = "Slack Test";
+        slack['text'] = text;
+        payload['slack'] = slack;
+        // Res["fulfillmentText"] = "Test Case";
+        // Res["payload"] = "Test Case";
+        // Res["fulfillmentMessages"] = mfr_name;
+        // Res["source"] = "webhook-echo-sample";
+        
+        Res["payload"] = payload;
+        Res["fulfillmentText"]="Test";
         res.json(Res);
     });
   return a;
