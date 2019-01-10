@@ -13,7 +13,7 @@ restService.use(
 
 restService.use(bodyParser.json());
 
-restService.post("/", function(req, res) {
+restService.get("/", function(req, res) {
   return res.json({
     source: "Hello Word"
   });
