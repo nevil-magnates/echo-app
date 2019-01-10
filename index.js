@@ -17,12 +17,12 @@ restService.use(bodyParser.json());
 
 
 
-Request.get("https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/5UXWX7C5*BA?format=json&modelyear=2011", (error, response, body) => {
-    if(error) {
-       return console.dir(error);
-    }
-    console.dir(JSON.parse(body));
-});
+// Request.get("https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/5UXWX7C5*BA?format=json&modelyear=2011", (error, response, body) => {
+//     if(error) {
+//        return console.dir(error);
+//     }
+//     console.dir(JSON.parse(body));
+// });
 
 restService.get("/", function(req, res) {
   return res.json({
